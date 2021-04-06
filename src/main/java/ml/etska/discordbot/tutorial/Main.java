@@ -24,12 +24,12 @@ public class Main {
 
         // Enable the bulk delete event
         builder.setBulkDeleteSplittingEnabled(false);
-        // Disable compression (not recommended)
-        builder.setCompression(Compression.NONE);
+        
         // Set activity (like "playing Something")
         builder.setActivity(Activity.watching("Discord bot tutorial by EtskaCoding"));
         
         builder.addEventListeners(new CommandListener());
+        builder.addEventListeners(new EmbedExample());
 
         builder.build();
     }

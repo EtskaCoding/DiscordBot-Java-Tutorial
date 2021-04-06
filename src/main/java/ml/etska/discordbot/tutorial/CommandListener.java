@@ -14,9 +14,9 @@ public class CommandListener extends ListenerAdapter{
     @Override
     public void onMessageReceived(MessageReceivedEvent e) {
         String[] args = e.getMessage().getContentRaw().split(" ");
-        if(args[0].equalsIgnoreCase(Main.prefix + "ping")) {
-            TextChannel channel = e.getTextChannel();
-            channel.sendMessage("Pong!").queue();
+        if(args[0].equalsIgnoreCase(Main.prefix + "ping")) { //Change this to your command
+            TextChannel channel = e.getTextChannel();//Get text channel
+            channel.sendMessage("Pong!").queue();//Send message to channel
         }
         
     }
